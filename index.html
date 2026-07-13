@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>KAMAREDDY DISTRICT - KAMAREDDY MANDAL</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+background:#eef3f8;
+}
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:#0b5394;
+padding:15px 25px;
+color:#fff;
+box-shadow:0 2px 8px rgba(0,0,0,.25);
+}
+
+.logo{
+width:70px;
+height:70px;
+object-fit:contain;
+}
+
+.title{
+text-align:center;
+flex:1;
+}
+
+.title h1{
+font-size:30px;
+margin-bottom:5px;
+}
+
+.title h2{
+font-size:18px;
+font-weight:normal;
+}
+
+.search-box{
+width:95%;
+max-width:800px;
+margin:20px auto;
+}
+
+.search-box input{
+width:100%;
+padding:14px;
+font-size:17px;
+border:1px solid #ccc;
+border-radius:10px;
+outline:none;
+}
+
+.search-box input:focus{
+border-color:#0b5394;
+}
+
+.container{
+width:95%;
+max-width:1100px;
+margin:auto;
+padding-bottom:40px;
+}
+
+.place{
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:#fff;
+padding:15px;
+margin-bottom:15px;
+border-radius:10px;
+box-shadow:0 2px 6px rgba(0,0,0,.15);
+transition:.3s;
+}
+
+.place:hover{
+transform:translateY(-3px);
+}
+
+.left{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.icon{
+width:55px;
+height:55px;
+display:flex;
+justify-content:center;
+align-items:center;
+border-radius:50%;
+background:#dbeeff;
+font-size:28px;
+}
+
+.info h3{
+color:#0b5394;
+margin-bottom:5px;
+}
+
+.info p{
+color:#666;
+}
+
+.open-btn{
+background:#0b5394;
+color:#fff;
+padding:10px 18px;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.open-btn:hover{
+background:#1565c0;
+}
+
+footer{
+background:#0b5394;
+color:#fff;
+text-align:center;
+padding:15px;
+margin-top:30px;
+}
+
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+gap:12px;
+}
+
+.logo{
+width:60px;
+height:60px;
+}
+
+.place{
+flex-direction:column;
+align-items:flex-start;
+gap:15px;
+}
+
+.open-btn{
+width:100%;
+text-align:center;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<img src="ou-logo.png" alt="OU Logo" class="logo">
+
+<div class="title">
+<h1>KAMAREDDY DISTRICT</h1>
+<h2>KAMAREDDY MANDAL</h2>
+</div>
+
+<img src="otbi-logo.png" alt="OTBI Logo" class="logo">
+
+</header>
+
+<div class="search-box">
+<input
+type="text"
+id="search"
+placeholder="Search Place..."
+onkeyup="searchPlaces()">
+</div>
+
+<div class="container" id="places">
+<!-- 1 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">🚌</div>
+        <div class="info">
+            <h3>KR-BUS STATION</h3>
+            <p>Bus Station</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.32628,78.32990" target="_blank">Open Map</a>
+</div>
+
+<!-- 2 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">🏛️</div>
+        <div class="info">
+            <h3>KR-CONVENTION 1</h3>
+            <p>Convention</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.31298,78.33831" target="_blank">Open Map</a>
+</div>
+
+<!-- 3 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">🏥</div>
+        <div class="info">
+            <h3>KR-HOSPITAL 3</h3>
+            <p>Hospital</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.32646,78.35029" target="_blank">Open Map</a>
+</div>
+
+<!-- 4 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">🎬</div>
+        <div class="info">
+            <h3>KR-CINEPLEX</h3>
+            <p>Cineplex</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.32556,78.33274" target="_blank">Open Map</a>
+</div>
+
+<!-- 5 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">🏨</div>
+        <div class="info">
+            <h3>KR-HOTEL 1</h3>
+            <p>Hotel</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.33174,78.32479" target="_blank">Open Map</a>
+</div>
+
+<!-- 6 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">🕌</div>
+        <div class="info">
+            <h3>KR-MASJID</h3>
+            <p>Masjid</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.33589,78.34842" target="_blank">Open Map</a>
+</div>
+
+<!-- 7 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">🏥</div>
+        <div class="info">
+            <h3>KR-HOSPITAL 1</h3>
+            <p>Hospital</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.32853,78.34137" target="_blank">Open Map</a>
+</div>
+
+<!-- 8 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">🏫</div>
+        <div class="info">
+            <h3>KR-SCHOOL 1</h3>
+            <p>School</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.31509,78.33231" target="_blank">Open Map</a>
+</div>
+<!-- 9 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">🛒</div>
+        <div class="info">
+            <h3>KR-SUPERMARKET</h3>
+            <p>Supermarket</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.32316,78.33283" target="_blank">Open Map</a>
+</div>
+
+<!-- 10 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">🌳</div>
+        <div class="info">
+            <h3>KR-GARDEN 2</h3>
+            <p>Garden</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.30820,78.34027" target="_blank">Open Map</a>
+</div>
+
+<!-- 11 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">☕</div>
+        <div class="info">
+            <h3>KR-TEAPOINT</h3>
+            <p>Tea Point</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.32317,78.31571" target="_blank">Open Map</a>
+</div>
+
+<!-- 12 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">🏢</div>
+        <div class="info">
+            <h3>KR-SANGAM</h3>
+            <p>Sangam</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.32033,78.32101" target="_blank">Open Map</a>
+</div>
+
+<!-- 13 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">📍</div>
+        <div class="info">
+            <h3>KR-VIEW POINT</h3>
+            <p>View Point</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.30997,78.33234" target="_blank">Open Map</a>
+</div>
+
+<!-- 14 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">🥐</div>
+        <div class="info">
+            <h3>KR-BAKERY 1</h3>
+            <p>Bakery</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.32536,78.31739" target="_blank">Open Map</a>
+</div>
+
+<!-- 15 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">🍯</div>
+        <div class="info">
+            <h3>KR-HONEY FARM</h3>
+            <p>Honey Farm</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.31768,78.34339" target="_blank">Open Map</a>
+</div>
+
+<!-- 16 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">🛕</div>
+        <div class="info">
+            <h3>KR-TEMPLE 1</h3>
+            <p>Temple</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.31642,78.34593" target="_blank">Open Map</a>
+</div>
+<!-- 17 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">🏢</div>
+        <div class="info">
+            <h3>KR-LIC BRANCH OFFICE</h3>
+            <p>LIC Office</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.31961,78.35962" target="_blank">Open Map</a>
+</div>
+
+<!-- 18 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">⛽</div>
+        <div class="info">
+            <h3>KR-BHARAT PETROL</h3>
+            <p>Petrol Pump</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.32600,78.35586" target="_blank">Open Map</a>
+</div>
+
+<!-- 19 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">🏥</div>
+        <div class="info">
+            <h3>KR-HOSPITAL 2</h3>
+            <p>Hospital</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.33394,78.35325" target="_blank">Open Map</a>
+</div>
+
+<!-- 20 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">🌳</div>
+        <div class="info">
+            <h3>KR-PARK 1</h3>
+            <p>Park</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.33688,78.33041" target="_blank">Open Map</a>
+</div>
+
+<!-- 21 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">🛕</div>
+        <div class="info">
+            <h3>KR-TEMPLE 2</h3>
+            <p>Temple</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.33400,78.32513" target="_blank">Open Map</a>
+</div>
+
+<!-- 22 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">⛪</div>
+        <div class="info">
+            <h3>KR-CHURCH</h3>
+            <p>Church</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.32723,78.32065" target="_blank">Open Map</a>
+</div>
+
+<!-- 23 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">🛕</div>
+        <div class="info">
+            <h3>KR-TEMPLE 3</h3>
+            <p>Temple</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.32768,78.34281" target="_blank">Open Map</a>
+</div>
+
+<!-- 24 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">👮</div>
+        <div class="info">
+            <h3>KR-POLICE STATION</h3>
+            <p>Police Station</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.32115,78.33786" target="_blank">Open Map</a>
+</div>
+<!-- 25 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">🚉</div>
+        <div class="info">
+            <h3>KR-RAILWAY STATION</h3>
+            <p>Railway Station</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.32522,78.33594" target="_blank">Open Map</a>
+</div>
+
+<!-- 26 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">⚖️</div>
+        <div class="info">
+            <h3>KR-COURT COMPLEX</h3>
+            <p>Court</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.32294,78.33511" target="_blank">Open Map</a>
+</div>
+
+<!-- 27 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">🌳</div>
+        <div class="info">
+            <h3>KR-PARK 2</h3>
+            <p>Park</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.33687,78.33041" target="_blank">Open Map</a>
+</div>
+
+<!-- 28 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">🍽️</div>
+        <div class="info">
+            <h3>KR-RESTAURENT 1</h3>
+            <p>Restaurant</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.33031,78.32677" target="_blank">Open Map</a>
+</div>
+
+<!-- 29 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">🕌</div>
+        <div class="info">
+            <h3>KR-DARGAH</h3>
+            <p>Dargah</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.31610,78.32569" target="_blank">Open Map</a>
+</div>
+
+<!-- 30 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">🍽️</div>
+        <div class="info">
+            <h3>KR-RESTAURENT 2</h3>
+            <p>Restaurant</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.32623,78.35349" target="_blank">Open Map</a>
+</div>
+
+<!-- 31 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">🏛️</div>
+        <div class="info">
+            <h3>KR-CONVENTION 2</h3>
+            <p>Convention</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.29535,78.34654" target="_blank">Open Map</a>
+</div>
+
+<!-- 32 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">🏢</div>
+        <div class="info">
+            <h3>KR-COLLECTOR OFFICE</h3>
+            <p>Collector Office</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.34218,78.33473" target="_blank">Open Map</a>
+</div>
+
+<!-- 33 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">🎓</div>
+        <div class="info">
+            <h3>KR-ACADEMY</h3>
+            <p>Academy</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.31922,78.33859" target="_blank">Open Map</a>
+</div>
+</div>
+
+<footer>
+    <p>© 2026 Kamareddy District - Kamareddy Mandal</p>
+    <p>Developed using OU & OTBI Project Template</p>
+</footer>
+
+<script>
+
+function searchPlaces() {
+
+    let input = document.getElementById("search").value.toLowerCase();
+
+    let places = document.getElementsByClassName("place");
+
+    for (let i = 0; i < places.length; i++) {
+
+        let text = places[i].innerText.toLowerCase();
+
+        if (text.indexOf(input) > -1) {
+            places[i].style.display = "flex";
+        } else {
+            places[i].style.display = "none";
+        }
+    }
+}
+
+</script>
+
+</body>
+</html>
